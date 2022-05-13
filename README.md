@@ -43,7 +43,7 @@ sudo apt install vsftpd -y
 - 確認端口狀態
 
 ```
-sudo netstat -tlnp | grtp vsftpd
+sudo netstat -tlnp | grep vsftpd
 ```
 
 ![ftp-port](img/ftp-port.png) 
@@ -137,6 +137,7 @@ sudo systemctl restart vsftpd.service
 
 ```shell
 sudo ufw allow from any to any port 20,21,10000:10100 proto tcp
+sudo ufw reload
 ```
 
 ## 使用 MobaXterm 連接
